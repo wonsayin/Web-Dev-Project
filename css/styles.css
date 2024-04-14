@@ -1,0 +1,208 @@
+.content {
+  max-width: 200px;
+  margin: auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Tahoma, Serif;
+    background-color: #f8f8f8; /* Light gray background */
+    color: #263238; /* Dark gray text color */
+  }
+
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 1rem 2rem; 
+    align-items: center; /* Align items vertically */
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    /*background: #EAF2F8; 
+    color: #AF7AC5;*/
+  }
+  
+  nav ul {
+    display: flex; 
+    list-style: none; 
+  }
+  
+  nav li {
+    padding-left: 1rem; 
+  }
+
+  nav a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+  }
+
+  nav a:hover {
+    color: #af7ac5; /* Light purple color on hover */
+}
+
+.featured-content {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Distribute items evenly */
+  margin-top: 2rem; /* Add space above the featured content */
+}
+
+.featured-item {
+  flex: 1; /* Each item takes equal width */
+  margin-right: 1rem; /* Add space between items */
+  border-radius: 8px; /* Rounded corners for each item */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.featured-item img {
+  width: 100%; /* Make images fill the container */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Add hover effect to images */
+.featured-item:hover img {
+  transform: scale(1.05); /* Scale up the image on hover */
+}
+
+.media-section {
+  margin-bottom: 2rem;
+}
+
+.media-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.media-item img {
+  width: 100%;
+  height: auto;
+}
+
+.media-details {
+  padding: 1rem;
+}
+
+.media-details h4 {
+  margin-bottom: 0.5rem;
+}
+
+.media-details p {
+  margin-bottom: 0.5rem;
+}
+
+.survival-guide {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.survival-guide h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.survival-guide p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.survival-guide .button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.survival-guide .button:hover {
+  background-color: #45a049;
+}
+
+  form {
+  /* Form outline */
+    padding: auto;
+    border: auto;
+    border-radius: auto;
+   }
+
+   label {
+    /* Uniform size & alignment */
+    display: auto;
+    width: auto;
+    text-align:auto;
+    font-family: garamond, verdana, times new roman;
+    font-size: 20px;
+   }
+
+   input,
+    textarea {
+      /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+     font-family: Arial, Helvetica, sans-serif;
+     border: none;
+     border-bottom: 2px solid lightblue;
+
+     /* Uniform text field size */
+     width: auto;
+     box-sizing: auto;
+
+
+
+
+    /* Match form field borders */
+     border-color: auto;
+     }
+
+
+
+
+    input:focus,
+    textarea:focus {
+    /* Additional highlight for focused elements */
+     border-color: auto;
+    }
+
+    textarea {
+      /* Align multiline text fields with their labels */
+       vertical-align: auto;
+  
+  
+  
+  
+       /* Provide space to type some text */
+       height: auto;
+      }
+
+      .button {
+        /* Align buttons with the text fields */
+          padding-left: auto; /* same size as the label elements */
+         }
+    
+    
+    
+    
+         button {
+            /* This extra margin represent roughly the same space as the space
+            between the labels and their text fields */
+           margin-left: auto;
+           background-color: lightblue;
+           border: none;
+           margin: 4px 2px;
+           cursor: pointer;
+               }
+    
