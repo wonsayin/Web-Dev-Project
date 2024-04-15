@@ -44,6 +44,12 @@ nav {
     color: #af7ac5; /* Light purple color on hover */
 }
 
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 2rem;
+}
+
 .featured-content {
   display: flex; /* Use flexbox layout */
   justify-content: space-between; /* Distribute items evenly */
@@ -133,76 +139,42 @@ nav {
   background-color: #45a049;
 }
 
-  form {
-  /* Form outline */
-    padding: auto;
-    border: auto;
-    border-radius: auto;
-   }
+/* Form outline */
+form {
+  padding: auto;
+  border: 2px solid #af7ac5;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Light gray background */
+}
 
-   label {
-    /* Uniform size & alignment */
-    display: auto;
-    width: auto;
-    text-align:auto;
-    font-family: garamond, verdana, times new roman;
-    font-size: 20px;
-   }
+/* Styles for labels */
+label {
+  display: auto;
+  margin-bottom: 10px;
+  font-family: Garamond, serif;
+  font-size: 20px;
+  color: #333; /* Dark gray text color */
+}
 
-   input,
-    textarea {
-      /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-     font-family: Arial, Helvetica, sans-serif;
-     border: none;
-     border-bottom: 2px solid lightblue;
+/* Styles for text fields */
+input[type="radio"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
 
-     /* Uniform text field size */
-     width: auto;
-     box-sizing: auto;
+/* Styles for submit button */
+input[type="submit"] {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333333; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-
-
-
-    /* Match form field borders */
-     border-color: auto;
-     }
-
-
-
-
-    input:focus,
-    textarea:focus {
-    /* Additional highlight for focused elements */
-     border-color: auto;
-    }
-
-    textarea {
-      /* Align multiline text fields with their labels */
-       vertical-align: auto;
-  
-  
-  
-  
-       /* Provide space to type some text */
-       height: auto;
-      }
-
-      .button {
-        /* Align buttons with the text fields */
-          padding-left: auto; /* same size as the label elements */
-         }
-    
-    
-    
-    
-         button {
-            /* This extra margin represent roughly the same space as the space
-            between the labels and their text fields */
-           margin-left: auto;
-           background-color: lightblue;
-           border: none;
-           margin: 4px 2px;
-           cursor: pointer;
-               }
-    
+input[type="submit"]:hover {
+  background-color: #af7ac5;
+}
