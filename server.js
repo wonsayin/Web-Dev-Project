@@ -1,6 +1,7 @@
 // Import required modules
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs'); // Import the 'fs' module for file operations
 
 // Create an Express application
 const app = express();
@@ -21,7 +22,26 @@ const correctAnswers = {
 };
 
 // Define the minimum score required for the "Congratulations" message
-const minScoreForCongrats = 4;
+const minScoreForCongrats = 5;
+
+// Define a function to save the results to a file
+function saveResults(username, score, wrongAnswers) {
+    const data = {
+        username: username,
+        score: score,
+        wrongAnswers: wrongAnswers
+    };
+    try {
+        fs.writeFileSync('quiz_results.json', JSON.stringify(data));
+        console.log('Results saved successfully:', data);
+    } catch (err) {
+        console.error('Error saving results:', err);
+    }
+}
+
+// Define the route to handle quiz submissions
+app.post('/submit-form'), (req, res) => {
+    const formData = req.body;
 
 // Calculate the user's score
 let score = 0;
@@ -45,6 +65,9 @@ if (score >= minScoreForCongrats) {
     }
 }
 
+ // Save the results to a file
+ saveResults(formData.username, score, wrongAnswers);
+
 // Send the response back to the client
 res.send(message);
 
@@ -53,3 +76,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+}

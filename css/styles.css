@@ -12,7 +12,7 @@
   body {
     font-family: Arial, Tahoma, Serif;
     background-color: #f8f8f8; /* Light gray background */
-    color: #263238; /* Dark gray text color */
+    color: #333;
   }
 
 nav {
@@ -22,8 +22,6 @@ nav {
     align-items: center; /* Align items vertically */
     background-color: #333; /* Dark background color */
     color: #fff; /* White text color */
-    /*background: #EAF2F8; 
-    color: #AF7AC5;*/
   }
   
   nav ul {
@@ -41,8 +39,16 @@ nav {
   }
 
   nav a:hover {
-    color: #af7ac5; /* Light purple color on hover */
+    color: #e91e63; /* Red color on hover */
 }
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e91e63;
+  color: #333;
+}
+
 
 h1 {
   text-align: center;
@@ -50,99 +56,144 @@ h1 {
   margin-top: 2rem;
 }
 
-.featured-content {
+.featured-item {
   display: flex; /* Use flexbox layout */
-  justify-content: space-between; /* Distribute items evenly */
-  margin-top: 2rem; /* Add space above the featured content */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center text */
+  margin-right: 0; /* Removed since grid handles spacing */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
 }
 
-.featured-item {
-  flex: 1; /* Each item takes equal width */
-  margin-right: 1rem; /* Add space between items */
-  border-radius: 8px; /* Rounded corners for each item */
-  overflow: hidden; /* Hide overflowing content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+/* Adjust hover effects */
+.featured-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: scale(1.02); /* Slight scale up on hover */
 }
 
 .featured-item img {
-  width: 100%; /* Make images fill the container */
-  height: auto; /* Maintain aspect ratio */
-  transition: transform 0.3s ease; /* Smooth transition on hover */
+  width: 100%; /* Images fill the width of their container */
+  height: 300px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the space, cropping it if necessary */
+  transition: transform 0.3s ease; /* Smooth scale transition on hover */
 }
 
-/* Add hover effect to images */
-.featured-item:hover img {
-  transform: scale(1.05); /* Scale up the image on hover */
+
+.featured-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* Space between items */
+  margin-top: 2rem; /* Space above section */
+}
+
+
+.survival-guide {
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.survival-guide h3, .survival-guide h4 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.survival-guide p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.guide-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.guide-list li {
+  background-color: #f9f9f9;
+  border-left: 5px solid #e91e63; /* A light purple accent */
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.guide-list li strong {
+  color: #333; /* Darker text for emphasis */
+  display: block; /* Make the keyword bold and on its own line */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+.container h2 {
+    text-align: center; /* Center-align the content */
+    margin-bottom: 2rem; /* Add some bottom margin */
 }
 
 .media-section {
   margin-bottom: 2rem;
 }
 
+
 .media-item {
-  border: 1px solid #ccc;
+  border: 1px solid #e91e63;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 1rem;
+  display: flex; /* Add display flex */
+  justify-content: center; /* Center items horizontally */
+  background-color: #fff; /* White background for media items */
 }
 
 .media-item img {
-  width: 100%;
-  height: auto;
+  width: 200px; /* Set the width to match the desired size */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
 }
 
 .media-details {
   padding: 1rem;
 }
 
+.media-section h3 {
+  color: #e91e63;
+}
+
 .media-details h4 {
   margin-bottom: 0.5rem;
+  color: #333; /* Dark gray color for headings */
 }
 
 .media-details p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem; /* Increased margin-bottom for paragraphs */
+  text-indent: 1rem; /* Indent paragraphs */
 }
 
-.survival-guide {
-  background-color: #f8f8f8;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-top: 2rem;
+.media-details p span {
+  margin-left: 1rem; /* Ensure consistent spacing for ratings */
 }
 
-.survival-guide h3 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 1rem;
-}
-
-.survival-guide p {
-  color: #666;
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-.survival-guide .button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.survival-guide .button:hover {
-  background-color: #45a049;
+.media-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
 }
 
 /* Form outline */
 form {
   padding: auto;
-  border: 2px solid #af7ac5;
+  border: 2px solid #e91e63;
   border-radius: 10px;
   background-color: #f9f9f9; /* Light gray background */
 }
@@ -176,5 +227,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #af7ac5;
+  background-color: #e91e63;
 }
